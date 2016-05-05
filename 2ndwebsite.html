@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="stylesheet.css" type="text/css" charset="utf-8" />
+	<style> 
+		header{
+			background-color:black;
+			color:white;
+			text-align:center;
+			padding:10px;
+		}
+		nav{
+			line-height:60px;
+			color:#241E16;
+			background-color:#F0DEC7;
+			font-size: 14px;
+			height:800px;
+			width:15%;
+			float:left;
+			padding:5% 2.5%;
+			
+		}
+		aside{
+			height:800px;
+			color:#241E16;
+			font-size: 14px;
+			background-color:#F0DEC7;
+			width:15%;
+			float:right;
+			padding:5% 2.5%;
+			
+
+		}
+		section{
+			background-color:#FFFFEE;
+			line-height: 40px;
+			color:#241E16;
+			width:50%;
+			height:800px;
+			float:left;
+			padding: 2.5% 5% 10% 5%;
+
+		}
+		div.test{ 
+			background-color:gray;
+			margin:20px;
+			padding: 10px;
+		}
+		button{
+			padding: 8px 12px ;
+			font-size: 14px;
+			text-align: center;
+			cursor:pointer;
+			outline: none;
+			color:white;
+			background-color:#9CB252;
+			border:none;
+			border-radius: 100px;
+			
+		}
+		button:hover{background-color:#CBE86B; }
+		
+		button:active{
+			background-color:#9CB252;
+			transform: translateY(2px);
+
+		}
+		body
+		{
+			font-family: "Roboto";
+			margin: 0;
+			padding: 0;
+		}
+
+		div.dropdown {
+	    position: relative;
+	    display: inline-block;
+	    }
+
+		div.dropdown-content {
+			display: none;
+			position: absolute;
+			line-height: 30px;
+			font-size: 12px;
+			background-color: #f9f9f9;
+			min-width: 700px;
+			box-shadow: 0px 8px 16px 0px;
+			padding: 12px 16px;
+		}
+
+		div.dropdown:hover .dropdown-content {
+	    display: block;
+	    }
+	</style>
+</head>
+<body onload="cache()">
+
+<script>
+
+	var myglobal;
+
+	function cache()
+	{
+		myglobal = document.getElementById("change").innerHTML;
+	
+		//makes a global varible that can always be used. 
+	}
+
+	function function1(){
+		var x = document.getElementById("change");
+		x.style.fontSize= "12px"; 
+		x.style.color="yellow";
+		//changes style
+	}
+
+
+	function function2(){
+		var str = document.getElementById("change").innerHTML; 
+	    var res = str.replace("Dyslexia is classified as a reading disorder. People who have dyslexia struggle with reading, spelling words, sounding out words, writing words, pronouncing words when reading out loud and understanding words when reading. The cause of dyslexia is said to involve both genetics and environmental factors. Dyslexia can runs within the family. It is often linked with people who have Attention Deficit Hyperactivity Disorder. While there is no treatment for dyslexia treatment involves different teaching methods. This will help with the underlying problem and cause for the dyslexia not to be as severe as an   adult. in my experience, dyslexia has made reading more of a chore for me than something I enjoy, something that i constantly want to avoid at all costs.The purpose of this website is to help you understand some of the things that people with dyslexia deal with. I will say that everyone with dyslexia has a different experience. This website is about how I personally experience reading.This website is also an dramatization of what really happens to me when i read so that the user can see it easier. There are many things that happen to me while i'm reading. Here a few. Click the buttons to have a interactive experience. Hover over the More Info to get more info.", "so have for you the want with dyslexia words with understanding different is people There and to who things While can with writing website family. for  an as is People help severe has reading. also dramatization info all help are words, more interactive linked a problem the adult. words, reading and many Hover dyslexia to a more me buttons Deficit who to me when that experience. i both dyslexia that that experience. often about website understand to runs different pronouncing to people It when a info” Here have I This This said things is words, dyslexia underlying of really to teaching be will easier. deal a experience, at a made is to The what user as is to Dyslexia experience read can while Dyslexia has sounding out costs.The more reading. few. is factors. an some treatment website it within struggle of as something Click in Attention treatment is not of constantly say dyslexia reading, over me disorder. my avoid personally than chore will happens the reading that see enjoy, I of genetics cause out and I words when get everyone involve Disorder. there Hyperactivity of how i the loud with environmental with. the dyslexia reading with something reading.This have purpose spelling involves the this classified for that cause dyslexia methods. no happen the i'm.");
+	    document.getElementById("change").innerHTML = res;
+	    //replaces text
+	}
+
+	function function3(){
+		var str = document.getElementById("change").innerHTML;
+		var res = str.replace(/as/g,"has");
+		res = res.replace(/can/g,"ran");
+		document.getElementById("change").innerHTML = res;
+		//replaces words with simalar 
+	}
+
+	function function4(){
+		var str = document.getElementById("change").innerHTML;
+		var res = str.replace(/p/g,"q");
+		res = res.replace(/g/g,"j");
+		document.getElementById("change").innerHTML = res;
+		//replaces letters with simmlar
+	}
+		function function5(){
+			var x = document.getElementById("change");
+			x.innerHTML = myglobal;
+			x.style.fontSize= null; 
+			x.style.color= null;
+
+		//resets back to defuat 
+	}
+</script>
+
+	<nav>
+		<button type="button" onclick="function2()" title="click me" > Sentence </button>
+		<br>
+		<button type="button" onclick="function3()" title="click me"> Word </button>
+		<br>
+		<button type="button" onclick="function4()" title="click me"> Letter</button>
+		<br>
+		<button type="button" onclick="function1()" title="click me">Overload</button>
+		<br>
+		<button type="button" onclick="function5()" title="click me"> Reset</button>
+		<br>
+		<div class="dropdown">
+			More Info
+			<div class="dropdown-content">
+				<p> 
+					Sentence<br>
+					Usually when reading a sentence or paragraph, the words within the sentence will become jumbled around, ending up out of order. This makes it so I have to reread a sentence multiple times until I understand it. This also makes it so I have to read much slower, so that fewer words in the sentence become jumbled up.<br>
+					Word<br>
+					When reading similar words, they tend to get switched in my head constantly. Similar words are always substituting for one another in my head. Simple words like "does" become "goes" or "and" becomes "an" or "land." <br>
+					Letter<br>
+					Just like words, letters that look or sound similar in my head will switch with each other. When I'm reading, instead of seeing a P or a G, I might see a Q or a J.<br>
+					Overload<br>
+					Reading for long amounts of time is something that I cannot do. Because of the difficulty I have with reading, I can only read in short segments without becoming flustered and getting a headache. The reason the text becomes a bright yellow is to help simulate how overwhelming and flustering reading can be sometimes for me. Try reading the entire paragraph without feeling flustered.<br> 
+				</p>
+		</div>
+	</nav>
+
+	<section>
+		<h1 style="font-family:'lemonmilkregular';">DYSLEXIA</h1>
+		<p id="change">
+			Dyslexia is classified as a reading disorder. People who have dyslexia struggle with reading, spelling words, sounding out words, writing words, pronouncing words when reading out loud and understanding words when reading. The cause of dyslexia is said to involve both genetics and environmental factors. Dyslexia can runs within the family. It is often linked with people who have Attention Deficit Hyperactivity Disorder. While there is no treatment for dyslexia treatment involves different teaching methods. This will help with the underlying problem and cause for the dyslexia not to be as severe as an   adult. in my experience, dyslexia has made reading more of a chore for me than something I enjoy, something that i constantly want to avoid at all costs.The purpose of this website is to help you understand some of the things that people with dyslexia deal with. I will say that everyone with dyslexia has a different experience. This website is about how I personally experience reading.This website is also an dramatization of what really happens to me when i read so that the user can see it easier. There are many things that happen to me while i'm reading. Here a few. Click the buttons to have a interactive experience. Hover over the More Info to get more info.
+			
+
+</p>
+	</section>
+
+	<aside>
+		<p id="lol"> <span style="font-size:16px;">My name is Quentin.</span> I am a junior at germantown friends school. This website was created with two goals in mind: I wanted to educate people about something that a lot of people don't know about, and I wanted to do it in a fun and interactive way. This website aims to help more people understand how much dyslexia can affect someone, and how much it can be a struggle.</p>
+	</aside>
+
+</body>
+</html>
